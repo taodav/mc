@@ -4,6 +4,7 @@
 
 MC_BEDROCK_URL=($1)
 BEDROCK_SERVER_PATH="$HOME/server"
+MC_SCRIPTS_PATH="$HOME/mc"
 
 BEDROCK_ZIP_PATH="$HOME/bedrock_server.zip"
 
@@ -35,6 +36,14 @@ if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG
 fi
+
+# Deal with carry over files
+# It's really just server.properties
+
+if [ -f "$MC_SCRIPTS_PATH/server.properties" ]; then 
+    cp "$BEDROCK_SERVER_PATH/server.properties" $BEDROCK_SERVER_PATH
+    echo "Copied server properties over from $BEDROCK_SERVER_PATH/server.properties" 
+fi 
 
 
 # Unzip our file, output it to BEDROCK_SERVER_PATH
