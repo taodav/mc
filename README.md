@@ -9,3 +9,5 @@ then when editing the cron job, add the line
 ```
 @reboot ./~/mc/start.sh
 ```
+
+TODO: backup on system shutdown.
