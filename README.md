@@ -14,6 +14,7 @@ You also have to ensure that the correct ports are open, both from the server si
 In the server:
 ```
 sudo ufw allow 19132/udp
+sudo ufw allow OpenSSH
 sudo ufw enable
 ```
 
