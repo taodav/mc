@@ -1,6 +1,13 @@
 # mc
 minecraft server for the frens
 
+To start and set up the server, clone this repo into your instance, copy the URL for downloading the Bedrock edition server zip, `cd` into the `mc` folder and run
+
+```
+./update_server.sh https://minecraft.azureedge.net/bin-linux/bedrock-server-<VERSION>.zip
+```
+This should set up your server for you.
+
 To get `start.sh` running on reboot, make sure you do the following:
 ```
 crontab -e
