@@ -7,7 +7,7 @@ crontab -e
 ```
 then when editing the cron job, add the line
 ```
-@reboot ./~/mc/start.sh
+@reboot bash ~/mc/start.sh
 ```
 You also have to ensure that the correct ports are open, both from the server side of things and AWS.
 
