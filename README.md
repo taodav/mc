@@ -27,4 +27,14 @@ Address: 0.0.0.0/0
 
 Then you should be good to go!
 
+### ADDITIONAL STUFF
+To set yourself as OP, get your `xuid` from the server logs, then in `permissions.json` under the server folder, add the following:
+```
+[
+  {
+"permission": "operator",
+"xuid": "xxxxxxxx"
+}
+]
+```
 TODO: backup on system shutdown.
